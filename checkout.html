@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>checkout</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+
+  <body>
+    <header>
+        <img id="logo">
+        <nav id="header">
+            <ol id="header">
+                <li id="header"><a id="header" href="#">Home</a></li>
+                <li id="header"><a id="header" href="#">Jadwal</a></li>
+                <li id="header"><a id="header" href="#">Promo</a></li>
+                <li id="header"><a id="header" href="#">Tentang</a></li>
+            </ol>
+        </nav>
+    </header>
+    <a href="daftarpesawat.html" id="back"> « </a>
+
+    <h1 style="margin-top: 30px">Checkout</h1>
+
+    <div id="time">
+      <p id="hitunganMundur">00:00</p>
+    </div>
+
+    <div class="container">
+      <div class="data_personal">
+        <h2 style="color: #2336e8; text-align: center">
+          Kelengkapan Data Pribadi :
+        </h2>
+        <form id="form_data" action="">
+          <label for="nama">Nama :</label><br />
+          <input type="text" id="nama" name="nama" />
+          <br />
+          <label for="alamat">Alamat</label><br />
+          <textarea name="alamat" id="alamat" cols="50" rows="60"></textarea>
+          <br />
+          <label for="email">E-mail :</label><br />
+          <input type="email" name="email" id="email" />
+          <br />
+          <label for="telepon">No-HP :</label><br />
+          <input type="tel" name="telepon" id="telepon" />
+        </form>
+
+        <p style="font-weight: bold; color: #2336e8;">Note :<span style="font-weight:lighter; color: #000;"> Harap mengisi form dengan lengkap, kalau tidak anda tidak bisa melanjutkan penerbangan. #StayCourious</span></p>
+      </div>
+
+      <aside>
+        <h1 style="margin-top: 10px;">Pesanan Anda</h1>
+        <table id="order">
+          <tr>
+            <td>Asal</td>
+            <td id="kanan">
+              <p id="cek_asal"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tujuan</td>
+            <td id="kanan">
+              <p id="cek_tujuan"></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr color="#2336E8" /></td>
+          </tr>
+          <tr>
+            <td>Kursi</td>
+            <td id="kanan">
+              <p id="cek_kursi"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Kelas</td>
+            <td id="kanan">
+              <p id="cek_kelas"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Pesawat</td>
+            <td id="kanan"><b>Starling Air</b></td>
+          </tr>
+          <tr>
+            <td>Asal Bandara</td>
+            <td id="kanan">
+              <p id="cek_bandara1"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tiba di Bandara</td>
+            <td id="kanan">
+              <p id="cek_bandara2"></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr color="#2336E8" /></td>
+          </tr>
+
+          <tr>
+            <td>Waktu berangkat</td>
+            <td id="kanan">
+              <p id="cek_berangkat"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tiba</td>
+            <td id="kanan" class="waktu">
+              <p id="cek_tiba"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tanggal</td>
+            <td id="kanan">
+              <p id="cek_tanggal"></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr color="#2336E8" /></td>
+          </tr>
+
+          <tr>
+            <td><b> Harga</b></td>
+            <td id="kanan">
+              <p class="cek_harga"></p>
+            </td>
+          </tr>
+        </table>
+      </aside>
+    </div>
+    <div class="payment">
+        <div class="paycol">
+          <h3>Metode Pembayaran:</h3>
+        </div>
+        <div class="paycol">
+          <img src="home atribut/pembayaran_logo.png" alt="pembayaran">
+        </div>
+      </div>
+    <br />
+
+    <h1 style="text-align: left; margin-left: 30px; margin-top: 30px;">Total pembayaran</h1>
+    <div class="cash">
+      <table id="cash">
+        <tr>
+          <td>harga</td>
+          <td id="harga">
+            <p class="cek_harga"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>pajak pembayaran</td>
+          <td id="pajak">
+            <p id="pajak">Rp. 12.000</p>
+          </td>
+        </tr>
+        <tr>
+          <td>diskon</td>
+          <td id="diskon">0</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <hr color="#039808" />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Total Bayar</b></td>
+          <td id="total">
+            <p id="totalBayar"></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <center>
+      <button type="submit" onclick="inputPengguna()" id="pay">
+        Bayar sekarang
+      </button>
+    </center>
+
+    <footer>
+        <div class="row2">
+            <div class="kolom1">
+                <img class="iconLog" src="home atribut/kuylah.png" alt="iconLog">
+                <ul>
+                    <li>
+                        <p>"Situs pembelian tiket pesawat kuylah.com menawarkan berbagai pilihan penerbangan dengan
+                            harga terjangkau. Ayo segera pesan tiketmu di sini!"</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Partnership</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">BUMN</a></li>
+                    <li><a href="">Kemenkraf</a></li>
+                    <li><a href="">Google.com</a></li>
+                    <li><a href="">Amazon</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Yang kami tawarkan</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">Pesan Tiket</a></li>
+                    <li><a href="">Jadwal Pesawat</a></li>
+                    <li><a href="">Promo Menarik</a></li>
+                    <li><a href="">Microsoft 365 Education</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Ikuti Kami</h3>
+                <ul class="inside_kolom">
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/fb.png" alt="Facebook"
+                                height="20px" style="margin-right: 5px;"><span>Facebook</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/ig.png" alt="Instagram"
+                                height="20px" style="margin-right: 5px;"><span>Instagram</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/twt.png" alt="Twitter"
+                                height="20px" style="margin-right: 5px;">Twitter</a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/wa.png" alt="Whatsapp"
+                                height="20px" style="margin-right: 5px;">Whatsapp</a></li>
+            </div>
+        </div>
+        <p id="copyright">
+            © 2022 Kuylah.com - Terbang Bersamaku Hingga Langit Ketuju
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      //------------------------------------------------------------------
+      // Mencari elemen hitungan mundur
+      var hitunganMundurElemen = document.getElementById("hitunganMundur");
+
+      // Menentukan jumlah detik yang akan dihitung mundur
+      var detikMundur = 1800; // 30 menit x 60 detik
+
+      // Menjalankan fungsi hitungan mundur setiap 1 detik
+      setInterval(function () {
+        // Mengurangi detik yang tersisa
+        detikMundur--;
+
+        // Mengubah format menit:detik
+        var menit = Math.floor(detikMundur / 60);
+        var detik = detikMundur % 60;
+
+        // Menambahkan nol didepan jika menit atau detik kurang dari 10
+        if (menit < 10) {
+          menit = "0" + menit;
+        }
+        if (detik < 10) {
+          detik = "0" + detik;
+        }
+
+        // Menampilkan hitungan mundur
+        hitunganMundurElemen.innerHTML = "Silahkan selesaikan transaksi anda sebelum waktu checkout HABIS! : " + menit + ":" + detik;
+
+        // Jika hitungan mundur selesai, menampilkan alert
+        if (detikMundur == 0) {
+          alert("waktu habis");
+          window.location.href = "Home.html";
+        }
+      }, 1000);
+
+      // -------------------------------------------------------------------------
+
+      // Mengambil nilai dari localstorage
+      var asalBandara = localStorage.getItem("asalBandara");
+      var tujuanBandara = localStorage.getItem("tujuanBandara");
+      var dariJam = localStorage.getItem("dariJam");
+      var sampaiJam = localStorage.getItem("sampaiJam");
+      var asal = localStorage.getItem("asal");
+      var tujuan = localStorage.getItem("tujuan");
+      var tanggal = localStorage.getItem("tanggal");
+      var kursi = localStorage.getItem("kursi");
+      var hargaSementara= localStorage.getItem("hargaSementara");
+      var kelas= localStorage.getItem("kelas");
+
+      //   menghitung harga sesuai kelas kursi
+      function hitung() {
+        var kursi = localStorage.getItem("kursi");
+        var kelas = localStorage.getItem("kelas");
+        if (kelas == "Ekonomi") {
+          var hargaKelas = "100000";
+        } else if (kelas == "VIP") {
+          var hargaKelas = "500000";
+        } else if (kelas == "Premium") {
+          var hargaKelas = "700000";
+        } else {
+        }
+
+        var hasil = kursi * hargaSementara + parseInt(hargaKelas);
+        return hasil;
+      }
+      var hasilKali = hitung();
+
+      // Menampilkan nilai ke dalam elemen HTML
+      document.getElementById("cek_asal").innerHTML = asal;
+      document.getElementById("cek_tujuan").innerHTML = tujuan;
+      document.getElementById("cek_kursi").innerHTML = kursi;
+      document.getElementById("cek_bandara1").innerHTML = asalBandara;
+      document.getElementById("cek_bandara2").innerHTML = tujuanBandara;
+      document.getElementById("cek_berangkat").innerHTML = dariJam;
+      document.getElementById("cek_tiba").innerHTML = sampaiJam;
+      document.getElementById("cek_tanggal").innerHTML = tanggal;
+      document.getElementById("cek_kelas").innerHTML = kelas;
+      var harga = document.getElementsByClassName("cek_harga");
+
+      for (var i = 0; i < harga.length; i++) {
+        harga[i].innerHTML = "Rp. " + hasilKali;
+      }
+
+      //   rumus menghitung total bayar
+      var pajak = "12000";
+      var totalBayar = parseInt(hasilKali) + parseInt(pajak);
+
+      document.getElementById("totalBayar").innerHTML = "Rp. " + totalBayar;
+
+      // ---------------------------------------------------------------------------
+
+      //   ----------------------------------------------------------------------------
+      // fungsi klik submit pembayaran
+      function inputPengguna() {
+        // mengambil nilai
+        var nama = document.getElementById("nama").value;
+        var alamat = document.getElementById("alamat").value;
+        var telepon = document.getElementById("telepon").value;
+        var email = document.getElementById("email").value;
+        var t_pajak = "12000";
+
+        //menyimpan nilai
+        var pajakElemen = localStorage.setItem("pajak", t_pajak);
+        var totalElemen = localStorage.setItem("totalBayar", totalBayar);
+        var namaElemen = localStorage.setItem("nama", nama);
+        var alamatElemen = localStorage.setItem("alamat", alamat);
+        var teleponElemen = localStorage.setItem("telepon", telepon);
+        var emailElemen = localStorage.setItem("email", email);
+
+        //validasi
+        if (nama == "" || alamat == "" || telepon == "" || email == "") {
+          alert("Selesaikan Form data diri");
+          return false;
+        }
+        // confirm
+        else if (window.confirm("Apakah anda sudah membayar?")) {
+          // jalankan proses hapus data jika pengguna memilih OK
+          window.location = "invoice.html";
+        } else {
+          // batalkan proses hapus data jika pengguna memilih Cancel
+          cancelDelete();
+        }
+      }
+    </script>
+  </body>
+</html>

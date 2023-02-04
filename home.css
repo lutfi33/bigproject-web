@@ -1,0 +1,135 @@
+header {
+    height: auto;
+    background: linear-gradient(to right, #00CCFF 5%, #119ED8 85%);
+}
+
+
+ol,
+li,
+nav,
+a#header {
+    font-family: sans-serif;
+    list-style-type: none;
+    float: right;
+    position: relative;
+    text-decoration: none;
+    color: #003947;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+ol,
+li,
+a {
+    float: left;
+}
+
+nav {
+    height: auto;
+}
+
+
+#logo {
+    content: url("kuylah.com\ logo.png");
+    height: 30px;
+    margin: 10px;
+}
+
+#linehdr {
+    background: #003947;
+    height: 3px;
+    border: none;
+}
+
+#headerdiv {
+    color: black;
+    background: linear-gradient(to top, #119ED8 5%, #00CCFF 85%);
+    height: auto;
+}
+
+h1 {
+    margin: 20px;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+}
+
+p {
+    margin: 20px;
+    font-family: sans-serif;
+    color: black;
+    width: 350px;
+}
+
+button {
+    text-align: center;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+    height: 35px;
+    width: 200px;
+    background-color: #FFF000;
+}
+
+
+content {
+
+    height: 500px;
+    background: #119ED8;
+    width: 200px;
+    height: 500px;
+}
+
+aside {
+    background: #119ED8;
+    width: 200px;
+    float: right;
+    height: auto;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    height: auto;
+    background: #003947;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+#lineftr {
+    background: #00CCFF;
+    height: 3px;
+    border: none;
+}
+
+
+.footer {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: small;
+    float: none;
+    margin-top: 5px;
+}
+
+h2 {
+    color: #00CCFF;
+}
+
+#copyright {
+    font-size: small;
+    color: #00CCFF;
+    width: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    text-align: left;
+}

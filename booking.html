@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display">
+      <!-- Elemen HTML yang akan menampilkan data -->
+    </div>
+
+    <script>
+      // Mengambil nilai dari parameter query string
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get("name");
+      var email = params.get("email");
+
+      // Menampilkan nilai ke dalam elemen HTML
+      document.getElementById("display").innerHTML = name;
+    </script>
+  </body>
+</html>

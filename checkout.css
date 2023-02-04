@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("font/Poppins-Regular.ttf");
+}
+
+body {
+  margin: 0px;
+  background-color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*bagian header*/
+header {
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+  background-color: #ffff;
+  position: sticky;
+  top: 0;
+  margin-bottom: -5px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.137);
+}
+
+ol,
+li,
+nav,
+a#header {
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  float: right;
+  position: relative;
+  text-decoration: none;
+  color: #2336E8;
+  margin-right: 20px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+#header:hover {
+  color: #2336E8;
+  text-decoration: underline;
+}
+
+ol,
+li,
+a {
+  float: left;
+}
+
+/*bagian nav*/
+nav {
+  height: auto;
+  margin: auto;
+}
+
+#logo {
+  content: url("home\ atribut/kuylah.png");
+  width: 10%;
+  margin: 10px 10px 10px 30px;
+}
+
+#back {
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px 20px;
+  background-color: #2336e8;
+  border: none;
+  border-radius: 5px;
+  margin: 70px 30px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#time {
+  margin: 0px 30px;
+  color: #ffffff;
+  background-color: #ff7b00;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px;
+  margin-top: 50px;
+}
+
+/*..................................................................................................................*/
+.container {
+  height: 650px;
+  padding: 30px;
+  width: auto;
+}
+
+.data_personal {
+  float: left;
+  background-color: #ffffff;
+  height: 600px;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #00000082;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+aside {
+  float: right;
+  margin: auto;
+  padding: 10px;
+  color: black;
+  background: #8cb3ff;
+  height: auto;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: -5px 0 0 0 #2336e8;
+}
+
+#order {
+  width: 100%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: larger;
+}
+
+
+#alamat {
+  height: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="email"],
+[type="text"],
+[type="tel"] {
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(73, 73, 73);
+  ;
+  width: 500px;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(73, 73, 73);
+  ;
+  width: 500px;
+  height: 50px;
+  padding: 0px 10px;
+}
+
+.cash {
+  float: initial;
+  margin: 10px 30px;
+  padding: 10px;
+  color: black;
+  background: #d1fed3;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: -5px 0 0 0 #039808;
+}
+
+#cash {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infocash {
+  text-align: justify;
+}
+
+#harga,
+#pajak,
+#diskon,
+#total,
+#kanan {
+  text-align: right;
+  font-weight: bold;
+}
+
+#pay {
+  font-size: larger;
+  font-family: "Poppins", sans-serif;
+  background-color: #039808;
+  color: #ffffff;
+  width: auto;
+  height: 50px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px auto 50px auto;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+#pay:hover {
+  background-color: #085f0b;
+}
+
+/*..................................................................................................................*/
+
+/* METODE PEMBAYARAN */
+.payment {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-top: -30px;
+}
+
+.payment img {
+  width: 250px;
+  margin-left: 20px;
+}
+
+
+h1 {
+  margin: 5px auto;
+  color: #2336e8;
+  text-align: center;
+}
+
+h2 {
+  color: #2336e8;
+}
+
+#copyright {
+  font-size: small;
+  color: #000000;
+  width: auto;
+  position: relative;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+footer p {
+  color: #292929;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+footer {
+  background-color: #8cb3ff;
+  text-align: left;
+}
+
+footer .kolom {
+  width: 500px;
+
+}
+
+footer .kolom1 {
+  width: 700px;
+
+}
+
+footer {
+  background-color: #8cb3ff;
+  /* membuat warna pada background footer */
+  padding: 30px 0px;
+  /* membuat jarak terdalam horizontal 30px vertikal 0px */
+  margin-top: 20px;
+  /* memberikan jarak terluar bagian atas sebesar 20px */
+}
+
+footer ul {
+  list-style: none;
+  /* menghilangkan icon list */
+  padding: 0px 5px;
+  /* memberikan jarak terdalam horizontal 0px vertikal 5px */
+}
+
+footer .row2 {
+  display: flex;
+  /* membuat elemen sejajar ke kanan */
+  justify-content: space-around;
+  /* membuat item/list secara merata dalam garis dengan ruang yang sama di sekitarnya */
+  margin-left: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  /* menghilangkan garis bawah pada tag a */
+  line-height: 30px;
+  /* mengatur jarak antar baris tulisan */
+  color: #292929;
+  /* memberikan warna */
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+footer h3 {
+  color: #2336e8;
+}
+
+footer .iconLog {
+  width: 300px;
+}
+
+.inside_kolom {
+  float: none;
+  display: grid;
+}

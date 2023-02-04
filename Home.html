@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+</head>
+<style>
+  @font-face{
+      font-family:'Poppins';
+      src: url('font/Poppins-Regular.ttf');
+  }
+
+  body {
+      margin: 0px;
+      background-color: whitesmoke;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+  }
+ 
+  h2{
+    color: #2336E8;
+  }
+  /*bagian header*/
+  header {
+      font-family: 'Poppins', sans-serif;
+      height: auto;
+      background-color: #ffff;
+      position: sticky;
+      top: 0;
+      margin-bottom: -5px;
+      box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.137);
+  }
+ 
+  ol,
+  li,
+  nav,
+  a#header {
+      font-family: 'Poppins', sans-serif;
+      list-style-type: none;
+      float: right;
+      position: relative;
+      text-decoration: none;
+      color: #2336E8;
+      margin-right: 20px;
+      font-weight: bold;
+      margin-top: 8px;
+  }
+ 
+  #header:hover {
+      color:#2336E8;
+  text-decoration: underline;
+  }
+ 
+  ol,
+  li,
+  a {
+      float: left;  }
+ 
+  /* /bagian nav/ */
+  nav {
+      height: auto;
+      margin: auto;
+  }
+ 
+  #logo {
+      content: url("home\ atribut/kuylah.png");
+      width: 10%;
+      margin: 10px 10px 10px 30px;
+  }
+ 
+  .container {
+      height: 500px;
+      background-image: url(home\ atribut/banner.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: -40px;
+  }
+ 
+  .container2 {
+      margin-top: 30px;
+      height: 700px;
+      width: auto;
+      margin-right: 30px;
+  }
+ /* bagian profile */
+ .profile {
+  display: flex;
+  justify-content: space-between;
+  margin:200px 100px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.137);
+  border-radius: 12px;
+  padding: 30px;
+ }
+.col-prof{
+  color: rgb(88, 88, 88);
+  line-height: 35px;
+  font-size: 18px;
+}
+ .profile img{
+  width: 400px;
+  padding-right: 60px;
+  margin-top: 50px;
+ }
+  /* /bagian aside/ */
+  aside {
+      float: right;
+      margin: 10px;
+      padding: 10px;
+      color: black;
+      background: #8CB3FF;
+      height: 600px;
+      width: 20%;
+      border-radius: 10px;
+      box-shadow: -5px 0 0 0 #2336E8;
+ 
+  }
+ 
+  #promo {
+      text-align: center;
+      width: auto;
+      height: auto;
+      margin: 15px auto;
+  }
+  #promo img{
+    border-radius: 12px;
+  }
+  /* /jadwal pemerbagannnn/ */
+  .jadwal {
+      float: left;
+      background-color: #D0EBFF;
+      margin: 10px;
+      margin-left: 30px;
+      border-radius: 10px;
+      padding: 10px 20px;
+      height: 600px;
+      width: 70%;
+      box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.137);
+  }
+  .jadwal h2{
+    text-align: center;
+  }
+  /*layout pengisian pada pemesanan pesawat */
+ 
+  .form_penerbangan {
+ 
+      border-radius: 10px;
+      background: rgb(255, 255, 255);
+      width: auto;
+      height: auto;
+      margin: 0px 100px;
+      margin-top: -90px;
+      box-shadow: 0 5px 0 0 #2336E8;
+ 
+  }
+ 
+  form {
+      padding: 40px 30px;
+      margin-top: 15px;
+      border: #003947;
+      border-radius: 10px;
+      background-color: #8CB3FF;
+      height: auto;
+      width: auto;
+      display: inherit;
+      text-align: center;
+      /* ganti flex atau grip*/
+  }
+ 
+  select {
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      width: 300px;
+      height: 40px;
+      color: #003947;
+      font-weight: bold;
+      border-radius: 5px;
+ 
+  }
+ 
+  option {
+      font-family: 'Poppins', sans-serif;
+      color: #003947;
+      font-weight: bold;
+  }
+ 
+  .label {
+      background-color: #ffffff;
+      width: 300px;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+ 
+  }
+ 
+  input[type=number],[type=date],select {
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      height: 50px;
+      border-radius: 5px;
+      color: #003947;
+      font-weight: bold;
+      margin: 0px 10px;
+      padding: 0px 10px;
+  }
+ 
+ 
+  input[type=submit] {
+      margin-top: 50px;
+      text-align: center;
+      font-size: medium;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #ffffff;
+      border: none;
+      padding: 0px 20px;
+      border-radius: 5px;
+      height: 50px;
+      width: auto;
+      background-color: #2336E8;
+      cursor: pointer;
+      transition: 1s ease-in;
+  }
+  input[type=submit]:hover{
+      background: linear-gradient(
+    45deg,
+    rgba(0, 43, 186, 1) 12%,
+    rgba(25, 159, 255, 1) 83%
+  );
+      cursor: pointer;
+  }
+ 
+  form input, select {
+    margin-top: 20px ;
+  }
+ 
+  #kursi {
+      background-image: url("home\ atribut/people.png");
+      background-size: 30px;
+      background-position-x: left;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+  }
+ 
+  #kelas {
+      background-size: 30px;
+      background-position-x: left;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      border: none;
+      width: auto;
+      margin-right: 20px;
+  }
+ 
+  #tujuan {
+      background-image: url("home\ atribut/landing.png");
+      background-size: 30px;
+      background-position-x: left;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+  }
+ 
+  #asal {
+      background-image: url("home\ atribut/takeoff.png");
+      background-size: 30px;
+      background-position-x: left;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+  }
+ 
+  #tanggal {
+      background-image: url("home\ atribut/to.png");
+      background-size: 30px;
+      background-position-x: left;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+  }
+ 
+  table {
+    border-collapse: collapse;
+    
+  }
+  table, td {
+    border: 2px solid rgb(159, 186, 194);
+    
+  }
+  th{
+    background-color: #2336E8;
+    border: 2px solid #2336E8;
+    color: #fff;
+  }
+  td,th, tr{
+    padding: 5px;
+    text-align: center;
+
+  }
+ 
+ 
+  /* /bagian footer/ */
+
+  #copyright {
+      font-size: small;
+      color: #000000;
+      width: auto;
+      position: relative;
+      margin-top: 20px;
+    text-align: center;
+      font-family: 'Poppins', sans-serif;
+     
+ 
+  }
+  footer p {
+  color: #292929;
+  font-size: 14px;
+  font-weight: lighter;
+}
+footer {
+  background-color: #8cb3ff;
+  text-align: left;
+}
+.inside_kolom{
+float: none;
+display: grid;
+}
+
+footer .kolom {
+  width: 400px;
+display: grid;
+
+}
+footer .kolom1 {
+  width: 700px;
+
+}
+footer {
+  background-color: #8cb3ff; 
+  padding: 30px 0px; 
+  margin-top: 20px; 
+}
+footer ul {
+  list-style: none; 
+  padding: 0px 5px;
+}
+footer .row {
+ display: flex; 
+  justify-content: space-around;
+  margin-left: 40px;
+}
+footer a {
+  text-decoration: none; 
+  line-height: 30px; 
+  color: #292929; 
+  font-size: 14px;
+  font-weight: lighter;
+}
+footer h3 {
+  color: #2336e8;
+}
+footer .iconLog {
+  width: 300px;
+}
+ 
+</style>
+<body>
+  <header>
+    <img id="logo">
+    <nav id="header">
+      <ol id="header">
+        <li id="header"><a id="header" href="#">Home</a></li>
+        <li id="header"><a id="header" href="#jwd">Jadwal</a></li>
+        <li id="header"><a id="header" href="#">Promo</a></li>
+        <li id="header"><a id="header" href="#">Tentang</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class="container">
+  </div>
+
+  <div class="form_penerbangan">
+    <form id="form_pesawat">
+      <select id="asal" name="asal" size="1" multipe>
+        <option value="">Asal</option>
+        <option value="Yogyakarta">Yogyakarta</option>
+        <option value="Denpasar">Denpasar</option>
+        <option value="Jakarta">jakarta</option>
+      </select>
+
+      <select id="tujuan" name="tujuan" size="1" multipe>
+        <option value="">Tujuan</option>
+        <option value="Malang">Malang</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Banjarmasin">Banjarmasin</option>
+      </select>
+      <input type="date" name="tanggal" id="tanggal" />
+      <input type="number" name="kursi" id="kursi" value="" placeholder="Banyak Penumpang" min="1" />
+      <select name="kelas" id="kelas">
+        <option value="default">Kelas</option>
+        <option value="Ekonomi">Ekonomi</option>
+        <option value="VIP">VIP</option>
+        <option value="Premium">Premium</option>
+      </select>
+      <br />
+      <input type="submit" value="Cari Penerbangan" />
+    </form>
+  </div>
+
+  <div class="profile">
+    <div class="col-prof">
+      <img src="home atribut/kuylah.png" alt="icon">
+    </div>
+    <div class="col-prof">
+      <h2>Apa sih Kuylah.com?</h2>
+      <p>Kuylah.com adalah suatu aplikasi berbasis Web Apps yang didalamnya terdapat sistem transaksi pembelian tiket pesawat dan juga informasi mengenai jadwal penerbangan pesawat yang ada di Indonesia </p>
+      <p>#StayHoliday #Lihatdulubelinanti</p>
+    </div>
+  </div>
+  <div class="container2">
+    <aside>
+      <center><h2 style="margin-bottom: 20px ;">Promo</h2></center>
+      <div id="promo"><img src="home atribut/promo 1.jpg" alt="promo 1" height="150px"></div>
+      <div id="promo"><img src="home atribut/promo 2.png" alt="promo 2" height="150px"></div>
+      <div id="promo"><img src="home atribut/promo 3.png" alt="promo 3" height="150px"></div>
+
+    </aside>
+    <div id="jwd" class="jadwal">
+      <h2>Jadwal Penerbangan</h2>
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Waktu</th>
+          <th>Pesawat</th>
+          <th>Bandara</th>
+          <th>Asal</th>
+          <th>Bandara</th>
+          <th>Tujuan</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>07.00:08.30</td>
+          <td>Starling Air</td>
+          <td>Yogyakarta Internatinal Airport</td>
+          <td>Yogyakarta</td>
+          <td>Bandara Banjarmasin</td>
+          <td>Banjarmasin</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>09.00:10.30</td>
+          <td>Starling Air</td>
+          <td>Yogyakarta Internatinal Airport</td>
+          <td>Yogyakarta</td>
+          <td>Bandara Malang</td>
+          <td>Malang</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>11.00:12.30</td>
+          <td>Starling Air</td>
+          <td>Bandar Udara Halim Perdanakusuma</td>
+          <td>Jakarta</td>
+          <td>Bandara Banjarmasin</td>
+          <td>Banjarmasin</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>13.00:14.30</td>
+          <td>Starling Air</td>
+          <td>Yogyakarta Internatinal Airport</td>
+          <td>Yogyakarta</td>
+          <td>Bandar Udara Internasional Ngurah Rai</td>
+          <td>Denpasar</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>15.00:16.30</td>
+          <td>Starling Air</td>
+          <td>Bandar Udara Internasional Ngurah Rai</td>
+          <td>Denpasar</td>
+          <td>Bandara Malang</td>
+          <td>Malang</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>17.00:18.30</td>
+          <td>Starling Air</td>
+          <td>Bandar Udara Halim Perdanakusuma</td>
+          <td>Jakarta</td>
+          <td>Bandara Banjarmasin</td>
+          <td>Banjarmasin</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <footer>
+      <div class="row">
+        <div class="kolom1">
+          <img class="iconLog" src="home atribut/kuylah.png" alt="iconLog">
+          <ul>
+            <li>
+              <p>"Situs pembelian tiket pesawat kuylah.com menawarkan berbagai pilihan penerbangan dengan harga terjangkau. Ayo segera pesan tiketmu di sini!"</p>
+            </li>
+          </ul>
+        </div>
+        <div class="kolom">
+          <h3>Partnership</h3>
+          <ul class="inside_kolom">
+            <li ><a href="">BUMN</a></li>
+            <li><a href="">Kemenkraf</a></li>
+            <li><a href="">Google.com</a></li>
+            <li><a href="">Amazon</a></li>
+          </ul>
+        </div>
+        <div class="kolom">
+          <h3>Yang kami tawarkan</h3>
+          <ul class="inside_kolom">
+            <li><a href="">Pesan Tiket</a></li>
+            <li><a href="">Jadwal Pesawat</a></li>
+            <li><a href="">Promo Menarik</a></li>
+            <li><a href="">Microsoft 365 Education</a></li>
+          </ul>
+        </div>
+        <div class="kolom">
+          <h3>Ikuti Kami</h3>
+          <ul class="inside_kolom">
+            <li class="footer"><a class="footer" href="#"><img src="home atribut/fb.png" alt="Facebook"
+                  height="20px" style="margin-right: 5px;"><span>Facebook</span></a></li>
+            <li class="footer"><a class="footer" href="#"><img src="home atribut/ig.png" alt="Instagram"
+                  height="20px"style="margin-right: 5px;"><span>Instagram</span></a></li>
+            <li class="footer"><a class="footer" href="#"><img src="home atribut/twt.png" alt="Twitter"
+                  height="20px"style="margin-right: 5px;">Twitter</a></li>
+            <li class="footer"><a class="footer" href="#"><img src="home atribut/wa.png" alt="Whatsapp"
+                  height="20px"style="margin-right: 5px;">Whatsapp</a></li>
+        </div>
+      </div>
+      <p id="copyright">
+        Â© 2022 Kuylah.com - Terbang Bersamaku Hingga Langit Ketuju
+      </p>
+  </footer>
+  <script>
+    var form = document.getElementById("form_pesawat");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Menahan submit form
+
+      // Mengambil nilai dari input nama
+      var asal = document.getElementById("asal").value;
+      var tujuan = document.getElementById("tujuan").value;
+      var tanggal = document.getElementById("tanggal").value;
+      var kursi = document.getElementById("kursi").value;
+      var kelas = document.getElementById("kelas").value;
+
+      if (asal == "Yogyakarta" && tujuan == "Malang") {
+        asalBandara = "Yogya Internatinal Airport";
+        tujuanBandara = "Bandar Udara Abdulrachman Saleh"
+        hargaSementara = "1300000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+      } else if (asal == "Yogyakarta" && tujuan == "Bandung") {
+        asalBandara = "Yogya Internatinal Airport";
+        tujuanBandara = "Bandar Udara Internasional Husein Sastranegara"
+        hargaSementara = "1200000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+      } else if (asal == "Yogyakarta" && tujuan == "Banjarmasin") {
+        asalBandara = "Yogya Internatinal Airport";
+        tujuanBandara = "Bandara Internasional Syamsudin Noor"
+        hargaSementara = "1500000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+
+      } else if (asal == "Denpasar" && tujuan == "Malang") {
+        asalBandara = "Bandar Udara Internasional Ngurah Rai";
+        tujuanBandara = "Bandar Udara Abdulrachman Saleh"
+        hargaSementara = "1600000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+      } else if (asal == "Denpasar" && tujuan == "Bandung") {
+        asalBandara = "Bandar Udara Internasional Ngurah Rai";
+        tujuanBandara = "Bandar Udara Internasional Husein Sastranegara"
+        hargaSementara = "1300000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+
+      } else if (asal == "Denpasar" && tujuan == "Banjarmasin") {
+        asalBandara = "Bandar Udara Internasional Ngurah Rai";
+        tujuanBandara = "Bandara Internasional Syamsudin Noor"
+        hargaSementara = "1700000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+
+      } else if (asal == "Jakarta" && tujuan == "Malang") {
+        asalBandara = "Bandar Udara Halim Perdanakusuma";
+        tujuanBandara = "Bandar Udara Abdulrachman Saleh"
+        hargaSementara = "1100000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+
+      } else if (asal == "Jakarta" && tujuan == "Bandung") {
+        asalBandara = "Bandar Udara Halim Perdanakusuma";
+        tujuanBandara = "Bandar Udara Internasional Husein Sastranegara"
+        hargaSementara = "1000000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+
+      } else if (asal == "Jakarta" && tujuan == "Banjarmasin") {
+        asalBandara = "Bandar Udara Halim Perdanakusuma";
+        tujuanBandara = "Bandara Internasional Syamsudin Noor"
+        hargaSementara = "1600000";
+        localStorage.setItem("asalBandara", asalBandara);
+        localStorage.setItem("tujuanBandara", tujuanBandara);
+        localStorage.setItem("hargaSementara", hargaSementara);
+      } else { }
+      // Menyimpan data ke Local Storage
+      localStorage.setItem("asal", asal);
+      localStorage.setItem("tujuan", tujuan);
+      localStorage.setItem("tanggal", tanggal);
+      localStorage.setItem("kursi", kursi);
+      localStorage.setItem("kelas", kelas);
+
+      // validasi pindah page
+      if (asal == '' || tujuan == '' || tanggal == '' || kursi == '' || kelas == 'default') {
+        alert('Selesaikan Pemesanan Tiket');
+        return false;
+      } else {
+        window.location = "daftarpesawat.html";
+      }
+
+
+    });
+  </script>
+
+</body>
+
+</html>

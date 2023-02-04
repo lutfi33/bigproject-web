@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Daftar Pesawat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0px;
+            background-color: whitesmoke;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /*bagian header*/
+        header {
+            font-family: 'Poppins', sans-serif;
+            height: auto;
+            background-color: #ffff;
+            position: sticky;
+            top: 0;
+            margin-bottom: -5px;
+            box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.137);
+        }
+
+        ol,
+        li,
+        nav,
+        a#header {
+            font-family: 'Poppins', sans-serif;
+            list-style-type: none;
+            float: right;
+            position: relative;
+            text-decoration: none;
+            color: #2336E8;
+            margin-right: 20px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        #header:hover {
+            color: #2336E8;
+            text-decoration: underline;
+        }
+
+        ol,
+        li,
+        a {
+            float: left;
+        }
+
+        /*bagian nav*/
+        nav {
+            height: auto;
+            margin: auto;
+        }
+
+        #logo {
+            content: url("home\ atribut/kuylah.png");
+            width: 10%;
+            margin: 10px 10px 10px 30px;
+        }
+
+
+        #back {
+            font-weight: bolder;
+            font-size: larger;
+            padding: 10px 20px;
+            background-color: #2336e8;
+            border: none;
+            border-radius: 5px;
+            margin: 70px 30px;
+            text-decoration: none;
+            color: #fff;
+            transition: 5s;
+        }
+
+        #back:hover {
+            background: linear-gradient(45deg,
+                    rgba(0, 43, 186, 1) 12%,
+                    rgba(25, 159, 255, 1) 83%);
+        }
+
+        /*style judul*/
+        .h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+            height: 30px;
+            color: black;
+            text-align: center;
+            padding: 30px 0;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+
+        /*style tulisan dalam tabel*/
+        .h3 {
+            color: blue;
+            font-weight: bold;
+            margin-top: auto;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h4 {
+            color: green;
+            font-size: smaller;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h5 {
+            font-weight: bold;
+            font-size: larger;
+            color: rgba(85, 84, 84, 0.781);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h6 {
+            font-size: medium;
+            font-weight: bold;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        .btn {
+            background-color: blue;
+            height: auto;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid whitesmoke;
+            font-size: 18px;
+            margin-top: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 50px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 20px;
+            transition: 5s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg,
+                    rgba(0, 43, 186, 1) 12%,
+                    rgba(25, 159, 255, 1) 83%);
+        }
+
+        /* card */
+        .row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #c5e4f2;
+            margin: 30px 200px;
+            border-left: 5px solid #2336E8;
+            border-radius: 12px;
+        }
+
+        .col {
+            text-align: center;
+            line-height: 18px;
+            margin: auto 0px;
+            padding: 20px 0px;
+        }
+
+        .img-pesawat {
+            width: 80px;
+        }
+
+        .dariBandara,
+        .keBandara {
+            color: #2336E8;
+        }
+
+        .tampilkan1,
+        .tampilkan2 {
+            font-weight: bold;
+        }
+
+        /* /bagian footer/ */
+
+        #copyright {
+            font-size: small;
+            color: #000000;
+            width: auto;
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        footer p {
+            color: #292929;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+        footer {
+            background-color: #8cb3ff;
+            text-align: left;
+        }
+
+        .inside_kolom {
+            float: none;
+            display: grid;
+        }
+
+        footer .kolom {
+            width: 400px;
+            display: grid;
+
+        }
+
+        footer .kolom1 {
+            width: 700px;
+
+        }
+
+        footer {
+            background-color: #8cb3ff;
+            padding: 30px 0px;
+            margin-top: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0px 5px;
+        }
+
+        footer .row2 {
+            display: flex;
+            justify-content: space-around;
+            margin-left: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            line-height: 30px;
+            color: #292929;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+        footer h3 {
+            color: #2336e8;
+        }
+
+        footer .iconLog {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img id="logo">
+        <nav id="header">
+            <ol id="header">
+                <li id="header"><a id="header" href="#">Home</a></li>
+                <li id="header"><a id="header" href="#">Jadwal</a></li>
+                <li id="header"><a id="header" href="#">Promo</a></li>
+                <li id="header"><a id="header" href="#">Tentang</a></li>
+            </ol>
+        </nav>
+    </header>
+    <a href="Home.html" id="back"> « </a>
+
+    <p class="h2" style="font-weight:bold;">PILIH PESAWAT KESUKAANMU</p>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">07 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">08 : 30</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData1()">Pilih</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">09 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">10 : 30</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData2()">Pilih</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">11 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">12 : 30</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData3()">Pilih</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">09 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">10 : 30</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData4()">Pilih</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Strarlight Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">13 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">14 : 30</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData4()">PILIH</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">15 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">16 : 50</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData5()">Pilih</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="home atribut/pesawat.png" class="img-pesawat" alt="">
+        </div>
+        <div class="col">
+            <p class="h3">Starling Air</p><br>
+            <p id="harga" class="h4"></p>
+        </div>
+        <div class="col">
+            <p class="tampilkan1"></p><br>
+            <p id="dariJam" class="h6">17 : 00 </p> <br>
+            <p style="font-size:smaller;" class="dariBandara"></p>
+        </div>
+        <div class="col">
+            &#9654;
+        </div>
+        <div class="col">
+            <p class="tampilkan2"></p><br>
+            <p id="sampaiJam" class="h6">18 : 50</p> <br>
+            <p style="font-size:smaller;" class="keBandara"></p>
+        </div>
+        <div class="col">
+            <button class="btn" type="submit" onclick="simpanData6()">Pilih</button>
+        </div>
+    </div>
+    <footer>
+        <div class="row2">
+            <div class="kolom1">
+                <img class="iconLog" src="home atribut/kuylah.png" alt="iconLog">
+                <ul>
+                    <li>
+                        <p>"Situs pembelian tiket pesawat kuylah.com menawarkan berbagai pilihan penerbangan dengan
+                            harga terjangkau. Ayo segera pesan tiketmu di sini!"</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Partnership</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">BUMN</a></li>
+                    <li><a href="">Kemenkraf</a></li>
+                    <li><a href="">Google.com</a></li>
+                    <li><a href="">Amazon</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Yang kami tawarkan</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">Pesan Tiket</a></li>
+                    <li><a href="">Jadwal Pesawat</a></li>
+                    <li><a href="">Promo Menarik</a></li>
+                    <li><a href="">Microsoft 365 Education</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Ikuti Kami</h3>
+                <ul class="inside_kolom">
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/fb.png" alt="Facebook"
+                                height="20px" style="margin-right: 5px;"><span>Facebook</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/ig.png" alt="Instagram"
+                                height="20px" style="margin-right: 5px;"><span>Instagram</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/twt.png" alt="Twitter"
+                                height="20px" style="margin-right: 5px;">Twitter</a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/wa.png" alt="Whatsapp"
+                                height="20px" style="margin-right: 5px;">Whatsapp</a></li>
+            </div>
+        </div>
+        <p id="copyright">
+            Â© 2022 Kuylah.com - Terbang Bersamaku Hingga Langit Ketuju
+        </p>
+    </footer>
+    <script>
+        // ------------------------------------------------------------ 
+        // Mengambil nilai dari localstorage
+        var asal = localStorage.getItem("asal");
+        var tujuan = localStorage.getItem("tujuan");
+
+        // Menampilkan nilai ke dalam elemen HTML
+        var pesan1 = document.getElementsByClassName("tampilkan1");
+        var pesan2 = document.getElementsByClassName("tampilkan2");
+
+        for (var i = 0; i < pesan1.length; i++) {
+            pesan1[i].innerHTML = asal;
+        }
+        for (var i = 0; i < pesan2.length; i++) {
+            pesan2[i].innerHTML = tujuan;
+        }
+        //----------------------------------------------------------------
+
+        //----------------------------------------------------------------    
+        // menampilkan bandara
+        var asalBandara = localStorage.getItem("asalBandara");
+        var tujuanBandara = localStorage.getItem("tujuanBandara");
+        var hargaSementara = localStorage.getItem("hargaSementara");
+
+        var hargaElemen = document.getElementsByClassName("h4");
+        var dariBandaraElemen = document.getElementsByClassName("dariBandara");
+        var keBandaraElemen = document.getElementsByClassName("keBandara");
+
+        for (var i = 0; i < hargaElemen.length; i++) {
+            hargaElemen[i].innerHTML = "Rp. " + hargaSementara;
+        }
+        for (var i = 0; i < dariBandaraElemen.length; i++) {
+            dariBandaraElemen[i].innerHTML = asalBandara;
+        }
+        for (var i = 0; i < keBandaraElemen.length; i++) {
+            keBandaraElemen[i].innerHTML = tujuanBandara;
+        }
+        // menampilkan ke html
+
+
+        // --------------------------------------------------------------
+        // memilihi pesawat
+        function simpanData1() {
+            var dariJam = "08:00";
+            var sampaiJam = "09:00";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+        function simpanData2() {
+            var dariJam = "09:00";
+            var sampaiJam = "10:30";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+        function simpanData3() {
+            var dariJam = "11:00";
+            var sampaiJam = "12:30";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+        function simpanData4() {
+            var dariJam = "13:00";
+            var sampaiJam = "14:50";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+        function simpanData5() {
+            var dariJam = "15:00";
+            var sampaiJam = "16:50";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+        function simpanData6() {
+
+            var dariJam = "17:00";
+            var sampaiJam = "18:50";
+
+            localStorage.setItem("dariJam", dariJam);
+            localStorage.setItem("sampaiJam", sampaiJam);
+
+            // pindah page
+            window.location = "checkout.html";
+        }
+    //----------------------------------------------------------------
+    </script>
+</body>
+
+</html>

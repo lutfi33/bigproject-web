@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  height: 30px;
+  color: black;
+  text-align: center;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline rgba(0, 140, 255, 0.795);
+  font-family: 'Lucida Sans';
+}
+
+.h3 {
+  color: blue;
+  font-weight: bold;
+  margin-top: auto;
+  margin-left: 50px;
+  font-family: 'Segoe UI';
+}
+
+.h4 {
+  color: green;
+  font-size: smaller;
+  font-weight: bold;
+  margin-left: 50px;
+  font-family: 'Lucida Sans';
+}
+
+.asal, .tujuan {
+  font-weight: bold;
+  font-size: larger;
+  color: rgba(85, 84, 84, 0.781);
+  font-family: 'Segoe UI';
+}
+
+.h6 {
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+  font-family: 'Segoe UI';
+}
+
+.table-box {
+  margin: 50px auto;
+  margin-top: auto;
+}
+
+.table-row {
+  display: table;
+  width: 98.5%;
+  margin: 10px auto;
+  font-family: sans-serif;
+  background: transparent;
+  padding: 12px 0;
+  color: #555;
+  font-size: 13px;
+  box-shadow: 5px 5px 10px rgba(129, 127, 127, 0.726);
+  background-color: rgba(100, 194, 237, 0.329);
+  border-radius: 10px;
+
+}
+
+.table-cell1 {
+  display: table-cell;
+  width: 30%;
+  text-align: left;
+  padding-left: 10px;
+  padding: 4px 0;
+  vertical-align: middle;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.table-cell {
+  display: table-cell;
+  width: 30%;
+  text-align: center;
+  padding-left: 10px;
+  padding: 4px 0;
+  vertical-align: middle;
+}
+
+.table-cells {
+  display: table-cell;
+  width: 10%;
+  text-align: center;
+  padding-left: 10px;
+  padding: 4px 0;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.table-cell4 {
+  display: table-cell;
+  width: 30%;
+  text-align: center;
+  padding-left: 10px;
+  padding: 4px 0;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: blue;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  line-height: 35px;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+  border: 1px solid whitesmoke;
+  font-size: 15px;
+  margin-top: auto;
+  border-radius: 30px;
+  font-family: monospace;
+  font-size: larger;
+  cursor: pointer;
+  margin-right: 50px;
+  border: none;
+  font-family: 'Segoe UI';
+}
+
+.btn:active {
+  background-color: cornflowerblue;
+  transition: all;
+}
+

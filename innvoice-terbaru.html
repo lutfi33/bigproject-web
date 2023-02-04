@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="innvoice.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        /*style header, logo dan navigasi*/
+        header {
+            font-family: 'Poppins', sans-serif;
+            height: auto;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            margin-bottom: -5px;
+            width: 95%;
+        }
+
+        ol,
+        li,
+        nav,
+        a#header {
+            font-family: 'Poppins', sans-serif;
+            list-style-type: none;
+            float: right;
+            position: relative;
+            text-decoration: none;
+            color: #2336e8;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        #header:hover {
+            color: #2336e8;
+            text-decoration: underline;
+        }
+
+        ol,
+        li,
+        a {
+            float: left;
+        }
+
+        nav {
+            height: auto;
+            margin: auto;
+        }
+
+        #logo {
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            border-radius: 100%;
+            background-color: rgba(85, 85, 85, 0.315);
+            margin-left: 110px;
+        }
+
+        /*style judul invoice*/
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .h3 {
+            color: blue;
+            margin-top: auto;
+            margin-left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        aside {
+            float: right;
+            margin: auto;
+            padding: 10px;
+            color: black;
+            background: #8CB3FF;
+            height: 600px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: -5px 0 0 0 #2336E8;
+        }
+
+        /*style bagian tabel invoice*/
+        #invoice {
+            float: center;
+            margin: auto;
+            padding: 10px;
+            color: black;
+            background-color: rgba(100, 194, 237, 0.329);
+            height: 600px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: -5px 0 0 0 #2336E8;
+        }
+
+        .kanan {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /*style button*/
+        .jc-center {
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            border-radius: 8px;
+            padding: 15px 40px;
+            color: #ffffff;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            background-color: #2336e8;
+            color: white;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button:active {
+            background-color: cornflowerblue;
+            transition: all;
+        }
+
+        .button2 {
+            border: none;
+            border-radius: 8px;
+            padding: 15px 40px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            margin-right: 20px;
+            background-color: #D0EBFF;
+            color: #2336e8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button2:active {
+            background-color: #d0ecff49;
+            transition: all;
+        }
+
+        .logo {
+            height: 30px;
+            width: 30px;
+            margin: 15px;
+            border-radius: 100%;
+            background-color: #8CB3FF;
+            justify-content: left;
+        }
+
+        /*footer*/
+        footer {
+            margin-top: 15px;
+            text-align: center;
+            height: 100px;
+            background: #D0EBFF;
+            padding-bottom: 5px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1>INVOICE</h1>
+    <table id="invoice">
+        <th style="color:#2336E8; text-align:left; font-size: larger;">MEREK.COM</th>
+        <tr>
+            <td>Nama Lengkap :</td>
+            <td id="in_nama" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Alamat :</td>
+            <td id="in_alamat" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Gmail :</td>
+            <td id="in_email" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Nomor Handphone :</td>
+            <td id="in_telepon" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td>Tujuan :</td>
+            <td id="kota_tujuan" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Asal :</td>
+            <td id="kota_asal" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Pesawat :</td>
+            <td class="kanan"><b>Starling Air</b></td>
+        </tr>
+        <tr>
+            <td>Dari Bandara :</td>
+            <td id="dari_bandara" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Asal Bandara :</td>
+            <td id="ke_bandara" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Kursi :</td>
+            <td id="in_kursi" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td>Waktu Pemberangkatan :</td>
+            <td id="waktu_berangkat" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Waktu Tiba :</td>
+            <td id="waktu_tiba" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Tanggal :</td>
+            <td id="in_tanggal" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr></tr>
+        <tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Harga :</td>
+            <td id="in_harga" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Pajak Pembayaran :</td>
+            <td id="in_pajak" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Diskon :</td>
+            <td class="kanan"><b>Rp 0</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td><b> Total</b></td>
+            <td id="in_total" class="kanan"><b> Rp.Nominal</b></td>
+        </tr>
+    </table>
+    <br>
+
+    <script>
+         var tampil_nama = localStorage.getItem("nama");
+        var tampil_alamat = localStorage.getItem("alamat");
+        var tampil_email = localStorage.getItem("email");
+        var tampil_telepon = localStorage.getItem("telepon");
+
+        var tampil_kota_tujuan = localStorage.getItem("tujuan");
+        var tampil_kota_asal = localStorage.getItem("asal");
+        var tampil_drBandara = localStorage.getItem("asalBandara");
+        var tampil_tjBandara = localStorage.getItem("tujuanBandara");
+        var tampil_kursi = localStorage.getItem("kursi");
+
+        var tampil_drJam = localStorage.getItem("dariJam");
+        var tampil_smJam = localStorage.getItem("sampaiJam");
+        var tampil_tanggal = localStorage.getItem("tanggal");
+
+        var tampil_harga = localStorage.getItem("hargaSementara");
+        var tampil_pajak = localStorage.getItem("pajak");
+        var tampil_total = localStorage.getItem("totalBayar");
+
+       document.getElementById("in_nama").innerHTML = tampil_nama;
+       document.getElementById("in_alamat").innerHTML = tampil_alamat;
+       document.getElementById("in_email").innerHTML = tampil_email;
+       document.getElementById("in_telepon").innerHTML = tampil_telepon;
+
+       document.getElementById("kota_tujuan").innerHTML = tampil_kota_tujuan;
+       document.getElementById("kota_asal").innerHTML = tampil_kota_asal;
+       document.getElementById("dari_bandara").innerHTML = tampil_drBandara;
+       document.getElementById("ke_bandara").innerHTML = tampil_tjBandara;
+       document.getElementById("in_kursi").innerHTML = tampil_kursi;
+
+       document.getElementById("waktu_berangkat").innerHTML = tampil_drJam;
+       document.getElementById("waktu_tiba").innerHTML = tampil_smJam;
+       document.getElementById("in_tanggal").innerHTML = tampil_tanggal;
+
+       document.getElementById("in_harga").innerHTML = tampil_harga;
+       document.getElementById("in_pajak").innerHTML = tampil_pajak;
+       document.getElementById("in_total").innerHTML = tampil_total;
+
+    </script>
+</body>
+
+</html>

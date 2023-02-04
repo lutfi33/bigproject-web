@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*bagian header*/
+        header {
+            font-family: 'Poppins', sans-serif;
+            height: auto;
+            background-color: #ffff;
+            position: sticky;
+            top: 0;
+            margin-bottom: -5px;
+            box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.137);
+            z-index: 2;
+        }
+
+        ol,
+        li,
+        nav,
+        a#header {
+            font-family: 'Poppins', sans-serif;
+            list-style-type: none;
+            float: right;
+            position: relative;
+            text-decoration: none;
+            color: #2336E8;
+            margin-right: 20px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        #header:hover {
+            color: #2336E8;
+            text-decoration: underline;
+        }
+
+        ol,
+        li,
+        a {
+            float: left;
+        }
+
+        /*bagian nav*/
+        nav {
+            height: auto;
+            margin: auto;
+        }
+
+        #logo {
+            content: url("home\ atribut/kuylah.png");
+            width: 10%;
+            margin: 10px 10px 10px 30px;
+        }
+
+        /*style judul invoice*/
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: -50px;
+        }
+
+        .h3 {
+            color: blue;
+            margin-top: auto;
+            margin-left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .sub-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .flex-parent {
+            display: flex;
+            min-height: 0px;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        /*style button*/
+
+        button {
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            color: #ffffff;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            background-color: #2336e8;
+            color: white;
+            margin-right: 20px;
+            font-family: 'Poppins', sans-serif;
+            transition: 5s;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg,
+                    rgba(0, 43, 186, 1) 12%,
+                    rgba(25, 159, 255, 1) 83%);
+        }
+
+        .button2 {
+            border: none;
+            border-radius: 8px;
+            padding: 15px 40px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            margin-right: 20px;
+            background-color: #D0EBFF;
+            color: #2336e8;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        .button2:active {
+            background-color: #d0ecff49;
+            transition: all;
+
+        }
+
+        .logo {
+            height: 30px;
+            width: 30px;
+            margin: 15px;
+            border-radius: 100%;
+            background-color: #8CB3FF;
+            justify-content: left;
+        }
+
+        /*footer*/
+        /* /bagian footer/ */
+
+        #copyright {
+            font-size: small;
+            font-weight: 300;
+            color: #000000;
+            width: auto;
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        footer p {
+            color: #292929;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+        footer {
+            background-color: #8cb3ff;
+            text-align: left;
+        }
+
+        footer .kolom {
+            width: 400px;
+
+        }
+
+        footer .kolom1 {
+            width: 700px;
+
+        }
+
+        footer {
+            background-color: #8cb3ff;
+            padding: 30px 0px;
+            margin-top: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0px 5px;
+        }
+
+        footer .row2 {
+            display: flex;
+            justify-content: space-around;
+            margin-left: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            line-height: 30px;
+            color: #292929;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+        footer h3 {
+            color: #2336e8;
+        }
+
+        footer .iconLog {
+            width: 300px;
+        }
+
+        .inside_kolom {
+            float: none;
+            display: grid;
+        }
+
+        /*style bagian tabel invoice*/
+        #invoice {
+            float: center;
+            margin: 0px auto;
+            margin-top: -120px;
+            padding: 30px;
+            color: black;
+            background-color: rgba(100, 194, 237, 0.329);
+            height: 600px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: -5px 0 0 0 #2336E8;
+            line-height: 40px;
+        }
+
+        .kanan {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .cap {
+            position: relative;
+            width: 700px;
+            z-index: 1;
+            top: 490px;
+            left: 300px;
+            opacity: 40%;
+        }
+
+        .icon {
+            width: 200px;
+        }
+
+        .kode {
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo">
+        <nav id="header">
+            <ol id="header">
+                <li id="header"><a id="header" href="Home.html">Home</a></li>
+                <li id="header"><a id="header" href="#">Jadwal</a></li>
+                <li id="header"><a id="header" href="#">Promo</a></li>
+                <li id="header"><a id="header" href="#">Tentang</a></li>
+            </ol>
+        </nav>
+    </header>
+    <h1>INVOICE</h1>
+    <table id="invoice">
+        <tr>
+            <th style="color:#2336E8; text-align:left; font-size: larger;">
+                <img class="icon" src="home atribut/kuylah.png" alt="">
+            </th>
+        </tr>
+        <tr>
+            <th id="kode"></th>
+        </tr>
+        <tr>
+            <td>Nama Lengkap :</td>
+            <td id="in_nama" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Alamat :</td>
+            <td id="in_alamat" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Gmail :</td>
+            <td id="in_email" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Nomor Handphone :</td>
+            <td id="in_telepon" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td>Tujuan :</td>
+            <td id="kota_tujuan" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Asal :</td>
+            <td id="kota_asal" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Pesawat :</td>
+            <td class="kanan"><b>Starling Air</b></td>
+        </tr>
+        <tr>
+            <td>Dari Bandara :</td>
+            <td id="dari_bandara" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Tujuan Bandara :</td>
+            <td id="ke_bandara" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Kursi :</td>
+            <td id="in_kursi" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Kelas :</td>
+            <td id="in_kelas" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td>Waktu Pemberangkatan :</td>
+            <td id="waktu_berangkat" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Waktu Tiba :</td>
+            <td id="waktu_tiba" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Tanggal :</td>
+            <td id="in_tanggal" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr></tr>
+        <tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Harga :</td>
+            <td id="in_harga" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Pajak Pembayaran :</td>
+            <td id="in_pajak" class="kanan"><b>Kolom</b></td>
+        </tr>
+        <tr>
+            <td>Diskon :</td>
+            <td class="kanan"><b>Rp 0</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="color:#2336E8;">
+            </td>
+        </tr>
+        <tr>
+            <td><b> Total</b></td>
+            <td id="in_total" class="kanan"><b> Rp.Nominal</b></td>
+        </tr>
+        <img class="cap" src="home atribut/kuylah.png" alt="">
+    </table>
+    <div class="flex-parent">
+        <button class="button" onclick="printDiv('invoice')">Unduh Invoice</button>
+        <a href="Home.html" class="button2">Kembali</a>
+    </div>
+
+    <footer>
+        <div class="row2">
+            <div class="kolom1">
+                <img class="iconLog" src="home atribut/kuylah.png" alt="iconLog">
+                <ul>
+                    <li>
+                        <p>"Situs pembelian tiket pesawat kuylah.com menawarkan berbagai pilihan penerbangan dengan
+                            harga terjangkau. Ayo segera pesan tiketmu di sini!"</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Partnership</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">BUMN</a></li>
+                    <li><a href="">Kemenkraf</a></li>
+                    <li><a href="">Google.com</a></li>
+                    <li><a href="">Amazon</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Yang kami tawarkan</h3>
+                <ul class="inside_kolom">
+                    <li><a href="">Pesan Tiket</a></li>
+                    <li><a href="">Jadwal Pesawat</a></li>
+                    <li><a href="">Promo Menarik</a></li>
+                    <li><a href="">Microsoft 365 Education</a></li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Ikuti Kami</h3>
+                <ul class="inside_kolom">
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/fb.png" alt="Facebook"
+                                height="20px" style="margin-right: 5px;"><span>Facebook</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/ig.png" alt="Instagram"
+                                height="20px" style="margin-right: 5px;"><span>Instagram</span></a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/twt.png" alt="Twitter"
+                                height="20px" style="margin-right: 5px;">Twitter</a></li>
+                    <li class="footer"><a class="footer" href="#"><img src="home atribut/wa.png" alt="Whatsapp"
+                                height="20px" style="margin-right: 5px;">Whatsapp</a></li>
+            </div>
+        </div>
+        <p id="copyright">
+            © 2022 Kuylah.com - Terbang Bersamaku Hingga Langit Ketuju
+        </p>
+    </footer>
+    <script>
+        var tampil_nama = localStorage.getItem("nama");
+        var tampil_alamat = localStorage.getItem("alamat");
+        var tampil_email = localStorage.getItem("email");
+        var tampil_telepon = localStorage.getItem("telepon");
+
+        var tampil_kota_tujuan = localStorage.getItem("tujuan");
+        var tampil_kota_asal = localStorage.getItem("asal");
+        var tampil_drBandara = localStorage.getItem("asalBandara");
+        var tampil_tjBandara = localStorage.getItem("tujuanBandara");
+        var tampil_kursi = localStorage.getItem("kursi");
+        var kelas = localStorage.getItem("kelas");
+
+        var tampil_drJam = localStorage.getItem("dariJam");
+        var tampil_smJam = localStorage.getItem("sampaiJam");
+        var tampil_tanggal = localStorage.getItem("tanggal");
+
+        var tampil_harga = localStorage.getItem("hargaSementara");
+        var tampil_pajak = localStorage.getItem("pajak");
+        var tampil_total = localStorage.getItem("totalBayar");
+
+
+
+        document.getElementById("in_nama").innerHTML = tampil_nama;
+        document.getElementById("in_alamat").innerHTML = tampil_alamat;
+        document.getElementById("in_email").innerHTML = tampil_email;
+        document.getElementById("in_telepon").innerHTML = tampil_telepon;
+
+        document.getElementById("kota_tujuan").innerHTML = tampil_kota_tujuan;
+        document.getElementById("kota_asal").innerHTML = tampil_kota_asal;
+        document.getElementById("dari_bandara").innerHTML = tampil_drBandara;
+        document.getElementById("ke_bandara").innerHTML = tampil_tjBandara;
+        document.getElementById("in_kursi").innerHTML = tampil_kursi;
+        document.getElementById("in_kelas").innerHTML = kelas;
+
+        document.getElementById("waktu_berangkat").innerHTML = tampil_drJam;
+        document.getElementById("waktu_tiba").innerHTML = tampil_smJam;
+        document.getElementById("in_tanggal").innerHTML = tampil_tanggal;
+
+        document.getElementById("in_harga").innerHTML = tampil_harga;
+        document.getElementById("in_pajak").innerHTML = tampil_pajak;
+        document.getElementById("in_total").innerHTML = "Rp " + tampil_total;
+
+        document.getElementById("kode").innerHTML = "Kode Verifikasi: " + tampil_tanggal + "KYL" + tampil_telepon + "L99";
+
+        function printDiv(divId) {
+            var div = document.getElementById(divId);
+            var iframe = document.createElement('iframe');
+            document.body.appendChild(iframe);
+            iframe.contentWindow.document.write(div.outerHTML);
+            iframe.contentWindow.document.close();
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+            iframe.parentNode.removeChild(iframe);
+        }
+    </script>
+</body>
+
+</html>
